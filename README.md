@@ -1,4 +1,4 @@
-Smart Nav - Algorithmic Route Finder
+Smart Route Navigator - Algorithmic Route Finder
 ====================================
 
 _(Note: You can replace this link with an actual screenshot of your application running)_
