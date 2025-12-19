@@ -1,4 +1,4 @@
-Smart Nav - Algorithmic Route Finder
+Smart Route Navigator - Algorithmic Route Finder
 ====================================
 
 **Smart Route Navigator** is a web-based routing application developed to visualize and compare different pathfinding algorithms on a real-world map graph. The project focuses on the Menteşe/Muğla region and provides an interactive "Cyberpunk" styled dashboard to analyze the performance of **Dijkstra**, **A**\*, **BFS**, and **DFS** algorithms in real-time.
