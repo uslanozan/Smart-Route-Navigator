@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Route Navigator</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <h1> <span class="accent">CENG 3511 Final Project</span></h1>
+                <p class="subtitle">Algorithmic Route Finder</p>
+            </div>
+
+            <div class="control-panel">
+                <div class="control-group">
+                    <label>Algorithm Selection</label>
+                    <div class="select-wrapper">
+                        <select id="algorithm-select">
+                            <option value="dijkstra">Dijkstra's Shortest Path</option>
+                            <option value="astar">A* (A-Star) Search</option>
+                            <option value="dfs">Depth First Search</option>
+                            <option value="bfs">Breadth First Search</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="instructions">
+                    <p>🔵 <strong>Start:</strong> Click on map</p>
+                    <p>🔴 <strong>End:</strong> Click destination</p>
+                </div>
+            </div>
+
+            <div id="results" class="stats-panel">
+                <h3>Computation Metrics</h3>
+
+                <div class="stat-card">
+                    <span class="stat-label">Total Distance</span>
+                    <span class="stat-value"><span id="distance">-</span> m</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-label">Execution Time</span>
+                    <span class="stat-value"><span id="time">-</span> ms</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-label">Nodes Visited</span>
+                    <span class="stat-value"><span id="steps">-</span></span>
+                </div>
+
+                <div class="stat-card full">
+                    <span class="stat-label">Route Path</span>
+                    <div class="path-box">
+                        <span id="path">-</span>
+                    </div>
+                </div>
+
+                <div style="display:none;">
+                    <span id="start-node"></span>
+                    <span id="end-node"></span>
+                    <span id="path-count"></span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="map-wrapper">
+            <div id="map"></div>
+        </main>
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
