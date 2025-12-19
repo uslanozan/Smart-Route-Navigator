@@ -8,7 +8,6 @@ def dijkstra(graph, start_point, end_point):
     distBetwNodes = {node : float("inf") for node in nodes}
     distBetwNodes[start_point] = 0
 
-
     visitedNodes = {node: None for node in nodes}
 
     queue = [(0, start_point)]
