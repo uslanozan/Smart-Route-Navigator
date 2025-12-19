@@ -4,13 +4,13 @@ import time
 from geopy.distance import geodesic
 
 from dijkstra import dijkstra
-from A_star_search import a_star_search
+from a_star_search import a_star_search
 from bfs import bfs
 from dfs import dfs
 
 app = Flask(__name__)
 
-with open("graph_mentese_custom.json") as f:
+with open("mugla_graph.json") as f:
     graph = json.load(f)
 
 @app.route('/')
